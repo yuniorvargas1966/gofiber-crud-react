@@ -19,7 +19,7 @@ func conexionBD() (conexion *sql.DB) {
 	Contrasena := ""
 	Nombre := "taller"
 
-	conexion, err := sql.Open(Driver, Usuario+":"+Contrasena+"@tcp(127.0.0.1)/"+Nombre)
+	conexion, err := sql.Open(Driver, Usuario+":"+Contrasena+"@tcp(127.0.0.1:3306)/"+Nombre)
 	if err != nil {
 		panic(err.Error())
 	}
